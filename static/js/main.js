@@ -1,9 +1,5 @@
-// Danh sách mã code hợp lệ
 const validCodes = ["CODE123"];
-
-// Hàm show popup báo lỗi
 function showCodeErrorPopup() {
-  // Nếu đã có popup thì không tạo lại
   if (document.getElementById("popup-code-error")) {
     document.getElementById("popup-code-error").style.display = "flex";
     return;
@@ -31,7 +27,6 @@ function showCodeErrorPopup() {
   };
 }
 
-// Hàm show popup đang kiểm tra
 function showCheckingPopup() {
   const popup = document.getElementById("popup-dang-kiem-tra");
   if (popup) {
@@ -77,17 +72,16 @@ window.addEventListener("DOMContentLoaded", function () {
   const kiemTraBtn = document.getElementById("kiem-tra-btn");
   if (!kiemTraBtn) return;
   kiemTraBtn.addEventListener("click", function (e) {
-    // Lấy giá trị mã code
     const codeInput = document.getElementById("promo-code");
     if (!codeInput) return;
     const code = codeInput.value.trim();
-    // Hiện popup đang kiểm tra
     showCheckingPopup();
     setTimeout(function () {
       hideCheckingPopup();
       if (validCodes.includes(code)) {
         showSuccessPopup(function () {
-          window.location.href = "https://5679.pages.dev/";
+          window.location.href =
+            "https://www.5679at.com/home/reg.html?inviteCode=31209707";
         });
       } else {
         showCodeErrorPopup();
