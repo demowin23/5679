@@ -181,6 +181,14 @@
           }, 2000);
         });
       }
+      // Ẩn banner khi click nút đóng
+      const closeBtn = document.querySelector(".right-gif-close-button");
+      const gifContainer = document.querySelector(".right-gif-container");
+      if (closeBtn && gifContainer) {
+        closeBtn.addEventListener("click", function () {
+          gifContainer.style.display = "none";
+        });
+      }
     </script>
   </body>
   <ddict-div style="visibility: visible !important"></ddict-div>
